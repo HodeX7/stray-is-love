@@ -6,11 +6,11 @@ import Link from "next/link";
 
 const Navbar = () => {
   const ITEMS = [
-    { title: "ABOUT US", url: "/about" },
-    { title: "STORIES", url: "/stories" },
-    { title: "GALLERY", url: "/gallery" },
-    { title: "DONATE", url: "/donate" },
-    { title: "CONTACT", url: "/contact" },
+    { title: "About", url: "/about" },
+    { title: "Stories", url: "/stories" },
+    { title: "Gallery", url: "/gallery" },
+    { title: "Donate", url: "/donate" },
+    { title: "Contact", url: "/contact" },
   ];
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,7 +30,6 @@ const Navbar = () => {
           className="cursor-pointer mr-10"
         />
       </Link>{" "}
-      */}
       <div
         className={`nav-items space-x-6 sm:flex ${
           menuOpen ? "flex" : "hidden"
