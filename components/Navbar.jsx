@@ -6,11 +6,11 @@ import Link from "next/link";
 
 const Navbar = () => {
   const ITEMS = [
-    { title: "ABOUT US", url: "/about" },
-    { title: "STORIES", url: "/stories" },
-    { title: "GALLERY", url: "/gallery" },
-    { title: "DONATE", url: "/donate" },
-    { title: "CONTACT", url: "/contact" },
+    { title: "About", url: "/about" },
+    { title: "Stories", url: "/stories" },
+    { title: "Gallery", url: "/gallery" },
+    { title: "Donate", url: "/donate" },
+    { title: "Contact", url: "/contact" },
   ];
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full sm:w-[60%] flex items-center justify-center py-4 px-6 sm:px-10 rounded-b-[2rem] shadow-3xl fixed top-0 bg-opacity-50 bg-pink-300 text-black backdrop-blur-md">
-      <Link href={"/"}>
+      {/* <Link href={"/"}>
         <Image
           src={"/logo.webp"}
           alt="StrayLove logo"
@@ -29,7 +29,7 @@ const Navbar = () => {
           height={24}
           className="cursor-pointer mr-10"
         />
-      </Link>
+      </Link> */}
       <div
         className={`nav-items space-x-6 sm:flex ${
           menuOpen ? "flex" : "hidden"
