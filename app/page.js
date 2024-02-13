@@ -3,6 +3,7 @@
 import Button from "@/components/Button";
 // import { Image } from "next/image";
 import { ArrowCircleLeft, ArrowCircleRight } from "iconsax-react";
+import { useState } from "react";
 
 const Card = () => {
   return (
@@ -19,22 +20,33 @@ const Card = () => {
   );
 };
 
-const GalleryCard = ({image}) => {
+const GalleryCard = ({ image, name }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="cursor-pointer w-64 h-64 m-4 overflow-hidden transition-transform transform-gpu hover:scale-105">
+    <div
+      className="relative cursor-pointer w-64 h-64 m-4 overflow-hidden transition-transform transform-gpu hover:scale-105"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <img src={image} alt="Card" className="w-full h-full object-cover" />
+      {isHovered && (
+        <div className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-50 transition-opacity">
+          <span className="text-lg font-bold">{name}</span>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default function Home() {
   return (
     <main className="flex flex-col w-screen">
-      <section className="flex min-h-screen flex-col items-center justify-center p-24 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: "url('/kitten.jpg')"
+      <section className="flex min-h-screen flex-col items-center justify-center p-24" style={{
+        backgroundImage: "url('/kitten.jpeg')"
       }}>
-        <h1 className="text-primary text-[10rem]">Stray is Love</h1>
-        <p className=" text-[1rem] text-center w-[50rem] mt-4 mb-8">Empowering compassion, one paw at a time. Join us in our mission to provide love and support for stray dogs in need.</p>
+        <h1 className="text-primary text-[8rem]">Stray is Love &lt;3 </h1>
+        <p className="text-primary text-[2rem] text-center w-[50rem] mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         <Button text={"Explore More"} />
       </section>
 
@@ -71,19 +83,19 @@ export default function Home() {
       </section>
 
       <section className="flex min-h-screen flex-col items-center justify-center p-24">
-        <h1 className="text-primary text-[8rem] mb-12">Gallery of Joy :)</h1>
+        <h1 className="text-primary text-[8rem] mb-12">Gallery of Happiness :)</h1>
         {/* <p className="text-primary text-[2rem] w-[50rem] mt-[-2rem]">Meet and experience the happiest stories!</p> */}
 
         <div className="flex flex-col items-center">
           <div className="flex justify-center mb-10">
-            <GalleryCard image="image1.jpg" />
-            <GalleryCard image="image2.jpg" />
-            <GalleryCard image="image3.jpg" />
+            <GalleryCard image="image1.jpeg" name="Max" />
+            <GalleryCard image="image2.jpeg" name="Tony" />
+            <GalleryCard image="image3.jpeg" name="Coco" />
           </div>
           <div className="flex justify-center">
-            <GalleryCard image="image4.jpg" />
-            <GalleryCard image="image5.jpg" />
-            <GalleryCard image="image6.jpg" />
+            <GalleryCard image="image4.jpeg" name="Dhruv" />
+            <GalleryCard image="image5.jpeg" name="Akshar" />
+            <GalleryCard image="image6.jpeg" name="Richa" />
           </div>
         </div>
       </section>
