@@ -20,25 +20,23 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full sm:w-[60%] flex items-center justify-between py-4 px-6 sm:px-10 rounded-b-[2rem] shadow-3xl fixed top-0 bg-opacity-50 bg-black backdrop-blur-md">
-      <div className="logo flex items-center justify-center">
-        <Link href={"/"}>
-          <Image
-            src={"/logo.webp"}
-            alt="StrayLove logo"
-            width={24}
-            height={24}
-            className="cursor-pointer"
-          />
-        </Link>
-      </div>
+    <nav className="w-full sm:w-[60%] flex items-center justify-center py-4 px-6 sm:px-10 rounded-b-[2rem] shadow-3xl fixed top-0 bg-opacity-50 bg-pink-300 text-black backdrop-blur-md">
+      <Link href={"/"}>
+        <Image
+          src={"/logo.webp"}
+          alt="StrayLove logo"
+          width={24}
+          height={24}
+          className="cursor-pointer mr-10"
+        />
+      </Link>
       <div
         className={`nav-items space-x-6 sm:flex ${
           menuOpen ? "flex" : "hidden"
         }`}
       >
         {ITEMS.map((item, idx) => (
-          <a className="font-bold" key={idx} href={item.url}>
+          <a key={idx} href={item.url}>
             {item.title}
           </a>
         ))}
