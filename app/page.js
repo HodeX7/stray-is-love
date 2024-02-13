@@ -42,11 +42,11 @@ const GalleryCard = ({ image, name }) => {
 export default function Home() {
   return (
     <main className="flex flex-col w-screen">
-      <section className="flex min-h-screen flex-col items-center justify-center p-24" style={{
+      <section className="bg-cover bg-repeat bg-no-repeat flex min-h-screen flex-col items-center justify-center p-24" style={{
         backgroundImage: "url('/kitten.jpg')"
       }}>
         <h1 className="text-primary text-[8rem]">Stray is Love &lt;3 </h1>
-        <p className="text-primary text-[2rem] text-center w-[50rem] mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <p className=" text-[1.1rem] mt-4 text-center w-[50rem] mb-8">Empowering compassion, one paw at a time. Join us in our mission to provide love and support for stray dogs in need </p>
         <Button text={"Explore More"} />
       </section>
 
@@ -83,8 +83,8 @@ export default function Home() {
       </section>
 
       <section className="flex min-h-screen flex-col items-center justify-center p-24">
-        <h1 className="text-primary text-[8rem] mb-12">Gallery of Happiness :)</h1>
-        {/* <p className="text-primary text-[2rem] w-[50rem] mt-[-2rem]">Meet and experience the happiest stories!</p> */}
+        <h1 className="text-primary text-[8rem] mb-12">Gallery of Joy :)</h1>
+        <p className="text-[1.1rem] w-[50rem] mt-[-2rem] text-center">Meet and experience the happiest stories!</p>
 
         <div className="flex flex-col items-center">
           <div className="flex justify-center mb-10">

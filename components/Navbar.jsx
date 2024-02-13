@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   const ITEMS = [
-    { title: "About Us", url: "/about" },
+    { title: "Home", url: "/" },
     { title: "Stories", url: "/stories" },
     { title: "Gallery", url: "/gallery" },
     { title: "Donate", url: "/donate" },
