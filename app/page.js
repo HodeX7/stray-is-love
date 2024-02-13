@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <main className="flex flex-col w-screen">
       <section className="flex min-h-screen flex-col items-center justify-center p-24" style={{
-        backgroundImage: "url('/kitten.jpeg')"
+        backgroundImage: "url('/kitten.jpg')"
       }}>
         <h1 className="text-primary text-[8rem]">Stray is Love &lt;3 </h1>
         <p className="text-primary text-[2rem] text-center w-[50rem] mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
