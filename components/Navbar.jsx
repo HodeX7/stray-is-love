@@ -28,8 +28,7 @@ const Navbar = () => {
           height={24}
           className="cursor-pointer mr-10"
         />
-      </Link>{" "}
-      */}
+      </Link>{" "} */}
       <div
         className={`nav-items space-x-6 sm:flex ${
           menuOpen ? "flex" : "hidden"

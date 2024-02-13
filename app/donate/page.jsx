@@ -1,4 +1,5 @@
 "use client";
+import CustomButton from "@/components/Button";
 import { Form, Input, Button, ConfigProvider } from "antd";
 
 const DonationForm = () => {
@@ -50,9 +51,7 @@ const DonationForm = () => {
             },
           }}
         >
-          <Button className="bg-pink-500 " htmlType="submit">
-            Donate Now
-          </Button>
+          <CustomButton text={"Donate Now"} />
         </ConfigProvider>
       </Form.Item>
     </Form>
