@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="z-[10] w-full sm:w-[60%] flex items-center justify-center py-4 px-6 sm:px-10 rounded-b-[2rem] shadow-3xl fixed top-0 bg-opacity-50 bg-pink-300 text-black backdrop-blur-md">
+    <nav className="z-[10] w-full sm:w-[60%] flex items-center justify-center py-4 px-6 sm:px-10 rounded-b-[2rem] shadow-3xl fixed top-0 bg-opacity-50 bg-pink-300 text-black backdrop-blur-sm">
       <div
         className={`nav-items space-x-6 sm:flex ${
           menuOpen ? "flex" : "hidden"

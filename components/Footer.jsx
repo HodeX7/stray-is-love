@@ -24,8 +24,8 @@ const Footer = () => {
     <footer className="w-full flex flex-col sm:flex-row justify-around items-start py-8 bg-white text-black">
       <div className="logo flex flex-col items-center justify-center mb-6 sm:mb-0">
         <Image src={"/logo.webp"} alt="StrayLove logo" width={80} height={80} />
-        <h1 className="font-black text-[3rem] tracking-[5px] my-4">
-          STRAY IS LOVE
+        <h1 className="text-primary text-[3rem] my-4">
+          Stray is Love
         </h1>
         <span className="text-muted text-md">
           @ 2024 | Stray Is Love | All Rights Reserved.
@@ -50,7 +50,7 @@ const Footer = () => {
             <Facebook variant="Bold" />
           </div>
         </div>
-        <Info title="POLICIES" data={["Privacy Policy", "Terms of Services"]} />
+        {/* <Info title="POLICIES" data={["Privacy Policy", "Terms of Services"]} /> */}
       </div>
     </footer>
   );

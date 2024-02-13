@@ -1,5 +1,7 @@
+"use client"
+
 import Button from "@/components/Button";
-import { Image } from "antd";
+// import { Image } from "next/image";
 import { ArrowCircleLeft, ArrowCircleRight } from "iconsax-react";
 
 const Card = () => {
@@ -28,11 +30,11 @@ const GalleryCard = ({image}) => {
 export default function Home() {
   return (
     <main className="flex flex-col w-screen">
-      <section className="flex min-h-screen flex-col items-center justify-center p-24" style={{
-        backgroundImage: "url('/kitten.jpeg')"
+      <section className="flex min-h-screen flex-col items-center justify-center p-24 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: "url('/kitten.jpg')"
       }}>
-        <h1 className="text-primary text-[8rem]">Stray is Love &lt;3 </h1>
-        <p className="text-primary text-[2rem] text-center w-[50rem] mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <h1 className="text-primary text-[10rem]">Stray is Love</h1>
+        <p className=" text-[1rem] text-center w-[50rem] mt-4 mb-8">Empowering compassion, one paw at a time. Join us in our mission to provide love and support for stray dogs in need.</p>
         <Button text={"Explore More"} />
       </section>
 
@@ -40,17 +42,13 @@ export default function Home() {
         <h1 className="text-primary text-[12rem]">Stories ...</h1>
         {/* <p className="text-primary text-[2rem] w-[50rem] mt-[-2rem]">Meet and experience the happiest stories!</p> */}
 
-        <div className="flex flex-col">
-          <Card />
-        </div>
-
-        <div className="mt-12 flex w-full z-0">
+        <div className="mt-8 flex w-full z-0">
           <div className="w-1/2 flex justify-end mr-5 ">
-            <Image src="/max.jpeg" height={500} alt="max" />
+            <img src="/max.jpeg" height={500} alt="max" />
           </div>
           <div className="w-1/2">
             <h1 className="font-bold text-7xl">Meet Max!</h1>
-            <p className="text-sm mt-6 mb-8">
+            <p className="text-sm mt-6 mb-8 font-100">
               "Max, the Street Dog" is a heartwarming tale of resilience,
               friendship, and hope. Max, a scrappy street dog, navigates the
               bustling city streets with courage and determination, despite
@@ -65,15 +63,15 @@ export default function Home() {
               regardless of their circumstances.
             </p>
             <div className="flex gap-5">
-              <ArrowCircleLeft className="cursor-pointer" size={50} />
-              <ArrowCircleRight className="cursor-pointer" size={50} />
+              <ArrowCircleLeft className="cursor-pointer" size={50} color="#0b0b0b" />
+              <ArrowCircleRight className="cursor-pointer" size={50} color="#0b0b0b" />
             </div>
           </div>
         </div>
       </section>
 
       <section className="flex min-h-screen flex-col items-center justify-center p-24">
-        <h1 className="text-primary text-[8rem] mb-12">Gallery of Happiness :)</h1>
+        <h1 className="text-primary text-[8rem] mb-12">Gallery of Joy :)</h1>
         {/* <p className="text-primary text-[2rem] w-[50rem] mt-[-2rem]">Meet and experience the happiest stories!</p> */}
 
         <div className="flex flex-col items-center">
